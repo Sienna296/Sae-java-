@@ -2,7 +2,7 @@
 Equipe :
 Elodie DAI
 Sienna PLISSART
-Bassirou Doucoure
-Tarik Mohamed
+Bassirou DOUCOURE
+Tarik MOHAMED
 
 Synthèse :
