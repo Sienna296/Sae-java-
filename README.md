@@ -6,3 +6,4 @@ Bassirou DOUCOURE
 Tarik MOHAMED
 
 Synthèse :
+
