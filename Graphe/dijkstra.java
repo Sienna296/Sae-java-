@@ -23,7 +23,7 @@ public class dijkstra {
             Map<T, Integer> distances = new HashMap<>();
             Queue<T> file = new LinkedList<>();
             Set<T> visites = new HashSet<>();
-            //j'ai mis des get pour espérer de régler l'erreur comme quoi on peut pas
+            //j'ai mis des get pour espérer de régler l'erreur comme quoi la fonction arrive pas à accéder à la valeur ?
             distances.put(Xdepart.getXd(), 0);
             distances.put(Ydepart.getYd(), 0);
 

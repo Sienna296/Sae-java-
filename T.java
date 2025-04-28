@@ -1,25 +1,41 @@
 import java.util.*;
-package graphe.Graphe.src.sommet;
 
 import java.util.List;
 
 public class T {
-    private int x;
-    private int y;
+    private int xDepart;
+    private int yDepart;
+    private int xArrivee;
+    private int yArrivee;
     //private List<Arete> voisins;
 
-    public T(int x, int y) {
-        this.x = x;
-        this.y = y;
-
+    public T(int xDepart, int yDepart) {
+        this.xDepart = xDepart;
+        this.yDepart = yDepart;
     }
 
-    public int getX() {
-        return x;
+    public T(int xArrivee, int yArrivee) {
+        this.xArrivee = xArrivee;
+        this.yArrivee = yArrivee;
     }
 
-    public int getY() {
-        return y;
+    //jveux justement avoir un T pour définir un peu les coordonnées différentes : celles de départ et celles d'arrivée mais voilà
+    //j'ai perdu mon cerveau
+
+    public int getXd() {
+        return xDepart;
+    }
+
+    public int getYd() {
+        return yDepart;
+    }
+
+    public int getXa() {
+        return xArrivee;
+    }
+
+    public int getYa() {
+        return yArrivee;
     }
 }
 
