@@ -1,9 +1,13 @@
+package Graphe;
+
+import java.util.*;
+
 public class dijkstra {
 
     public class Dijkstra implements Graphe<T> {
-        private static int Xdepart, Ydepart, Xarrivee, Yarrivee;
-        private static final int MAX_LIGNES ;
-        private static final int MAX_COLONNES;
+        private static T Xdepart, Ydepart, Xarrivee, Yarrivee;
+        private static final int MAX_LIGNES = 0;
+        private static final int MAX_COLONNES = 0;
 
         public dijkstra(T Xdepart, T Ydepart, T Xarrivee, T Yarrivee ){
             this.Xdepart = Xdepart;
@@ -20,19 +24,19 @@ public class dijkstra {
             Queue<T> file = new LinkedList<>();
             Set<T> visites = new HashSet<>();
 
-            distances.put(Xdepart, 0);
-            distances.put(Ydepart, 0);
+            distances.put(Xdepart.get(), 0);
+            distances.put(Ydepart.get(), 0);
 
-            file.add(Xdepart);
-            file.add(Ydepart);
+            file.add(Xdepart.get());
+            file.add(Ydepart.get());
 
 
-            if ( Xdepart < 0 || Xdepart >= MAX_LIGNES || Ydepart < 0 || Ydepart >= MAX_COLONNES) {
+            if ( Xdepart.get() < 0 || Xdepart.get() >= MAX_LIGNES || Ydepart.get() < 0 || Ydepart.get() >= MAX_COLONNES) {
                 System.out.println("Départ invalide !");
                 return null;
             }
 
-            if (Xarrivee < 0 || Xarrivee >= MAX_LIGNES || Yarrivee < 0 || Yarrivee >= MAX_COLONNES) {
+            if (Xarrivee.get() < 0 || Xarrivee.get() >= MAX_LIGNES || Yarrivee.get() < 0 || Yarrivee.get() >= MAX_COLONNES) {
                 System.out.println("Arrivée invalide !");
                 return null;
             }
@@ -64,5 +68,8 @@ public class dijkstra {
 
             return chemin;
         }
+    }
+
+    public static class Graphe {
     }
 }
