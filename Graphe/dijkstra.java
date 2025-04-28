@@ -23,20 +23,20 @@ public class dijkstra {
             Map<T, Integer> distances = new HashMap<>();
             Queue<T> file = new LinkedList<>();
             Set<T> visites = new HashSet<>();
+            //j'ai mis des get pour espérer de régler l'erreur comme quoi on peut pas
+            distances.put(Xdepart.getXd(), 0);
+            distances.put(Ydepart.getYd(), 0);
 
-            distances.put(Xdepart.get(), 0);
-            distances.put(Ydepart.get(), 0);
-
-            file.add(Xdepart.get());
-            file.add(Ydepart.get());
+            file.add(Xdepart.getXd());
+            file.add(Ydepart.getYd());
 
 
-            if ( Xdepart.get() < 0 || Xdepart.get() >= MAX_LIGNES || Ydepart.get() < 0 || Ydepart.get() >= MAX_COLONNES) {
+            if ( Xdepart.getXd() < 0 || Xdepart.getXd() >= MAX_LIGNES || Ydepart.getYd() < 0 || Ydepart.getYd() >= MAX_COLONNES) {
                 System.out.println("Départ invalide !");
                 return null;
             }
 
-            if (Xarrivee.get() < 0 || Xarrivee.get() >= MAX_LIGNES || Yarrivee.get() < 0 || Yarrivee.get() >= MAX_COLONNES) {
+            if (Xarrivee.getXa() < 0 || Xarrivee.getXa() >= MAX_LIGNES || Yarrivee.getYa() < 0 || Yarrivee.getYa() >= MAX_COLONNES) {
                 System.out.println("Arrivée invalide !");
                 return null;
             }
