@@ -1,8 +1,8 @@
 package main.dijkstra;
 
 
-import graph.Graph;
-import graph.ShortestPath;
+import main.graph.Graph;
+import main.graph.ShortestPath;
 
 import java.util.*;
 

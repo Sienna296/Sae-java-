@@ -2,8 +2,8 @@ package main.dijkstra;
 
 import java.util.List;
 
-import graph.GrapheHHAdj;
-import graph.VarGraph;
+import main.graph.GrapheHHAdj;
+import main.graph.VarGraph;
 import org.junit.jupiter.api.Test;
 
 public class GrapheTest {

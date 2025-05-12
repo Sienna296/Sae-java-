@@ -5,10 +5,10 @@ import static org.junit.jupiter.api.Assertions.*;
 import java.util.List;
 import java.util.Stack;
 
-import graph.Graph;
-import graph.GrapheHHAdj;
-import graph.ShortestPath.Distances;
-import graph.VarGraph;
+import main.graph.Graph;
+import main.graph.GrapheHHAdj;
+import main.graph.ShortestPath.Distances;
+import main.graph.VarGraph;
 import org.junit.jupiter.api.Test;
 
 class DijkstraTest {
