@@ -24,6 +24,7 @@ class DijkstraTest {
 	@Test
 	void test() {
 		VarGraph g = new GrapheHHAdj();
+		VarGraph g2 = new GrapheHHAdj();
 		g.peupler(GRAPH1);
 		tester(g);
 	}
