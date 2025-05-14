@@ -20,9 +20,8 @@ public class GraphMaze implements Graph {
         List<Arc<String>> arcs = new ArrayList<>();
         Set<Arc<String>> voisins = maze.openedNeighbours(s);
 
-        for(Arc<String> voisin : voisins){
-            arcs.add(new Arc<s, voisin, 1>);
-        }
+
+            arcs.addAll(voisins);
 
         return arcs;
     }
