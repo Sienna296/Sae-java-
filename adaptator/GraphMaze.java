@@ -3,7 +3,9 @@ package main.adaptator;
 import main.applications.Maze;
 import main.graph.Graph;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
 
 public class GraphMaze implements Graph {
     private Maze maze;
@@ -14,7 +16,14 @@ public class GraphMaze implements Graph {
     }
 
     public List<Arc<String>> getSucc(String s) {
-        return null; // jsp sa retourne quoi//
+
+        List<Arc<String>> arcs = new ArrayList<>();
+        Set<Arc<String>> voisins = maze.openedNeighbours(s);
+
+
+            arcs.addAll(voisins);
+
+        return arcs;
     }
 }
 
