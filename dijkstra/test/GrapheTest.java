@@ -1,4 +1,4 @@
-package main.dijkstra;
+package main.dijkstra.test;
 
 import java.util.List;
 
@@ -20,6 +20,8 @@ public class GrapheTest {
     void test() {
         VarGraph g = new GrapheHHAdj();
         VarGraph g2 = new GrapheHHAdj();
+        VarGraph g3 = new GrapheHHAdj();
+        VarGraph g4 = new GrapheHHAdj();
         g.peupler(GRAPH1);
 
         System.out.println(g);

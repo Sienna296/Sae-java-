@@ -1,10 +1,11 @@
-package main.dijkstra;
+package main.dijkstra.test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 import java.util.List;
 import java.util.Stack;
 
+import main.dijkstra.Dijkstra;
 import main.graph.Graph;
 import main.graph.GrapheHHAdj;
 import main.graph.ShortestPath.Distances;
