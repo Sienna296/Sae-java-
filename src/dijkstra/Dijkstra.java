@@ -27,7 +27,7 @@ public class Dijkstra<T> implements ShortestPath<T> {
 		// On visite les sommets voisins
 		for (int i = 0; i < voisinsAVisiter.size(); i++) {
 			T sommetActuel = voisinsAVisiter.get(i);
-			for (Graph.Arc<T> arc : g.getSucc((T) sommetActuel)) {
+			for (Graph.Arc<T> arc : g.getSucc(sommetActuel)) {
 				T voisin = (T) arc.dst();
 
 				// Ajoute les sommets découverts à voisinsAVisiter si nouveaux
