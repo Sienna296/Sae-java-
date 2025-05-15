@@ -20,16 +20,17 @@ public class GrapheTest {
     void test() {
         VarGraph g = new GrapheHHAdj();
         VarGraph g2 = new GrapheHHAdj();
+        VarGraph g3 = new GrapheHHAdj();
         g.peupler(GRAPH1);
 
         System.out.println(g);
         System.out.println("TEST AJOUT SOMMETS ET ARCS");
-        g2.ajouterSommet("A");
-        g2.ajouterSommet("B");
-        g2.ajouterSommet("C");
+        g.ajouterSommet("A");
+        g.ajouterSommet("B");
+        g.ajouterSommet("C");
 
-        g2.ajouterArc("A", "B", 5);
-        g2.ajouterArc("A", "C", 10);
+        g.ajouterArc("A", "B", 5);
+        g.ajouterArc("A", "C", 10);
 
         System.out.println("Successeurs de A : " + g.getSucc("A"));
         System.out.println("Successeurs de B : " + g.getSucc("B"));
