@@ -15,7 +15,7 @@ public class GraphMaze<T> implements Graph<T> {
     public List<Arc<T>> getSucc(T s) {
         List<Arc<T>> arcs = new ArrayList<>();
         for (T voisin : maze.openedNeighbours(s)) {
-            arcs.add(new Arc<>(1, voisin));
+            arcs.add(new Arc<>(1, (String) voisin));
         }
         return arcs;
     }
