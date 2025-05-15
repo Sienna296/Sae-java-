@@ -7,15 +7,15 @@ import graph.ShortestPath;
 import java.util.*;
 
 
-public class Dijkstra<String> implements ShortestPath<String> {
-	private Map<String, Integer> dist = new HashMap<>(); // Pour stocker la distance minimale pour chaque sommet
-	private Map<String, String> pred = new HashMap<>(); // Stocke le prédécesseur pour chaque sommet
-	private Map<String, Boolean> marque = new HashMap<>(); // Stocke les sommet marqués (--> on connait deja sa distance minimale)
-	private List<String> voisinsAVisiter = new ArrayList<>(); // Stocke les sommets pas encore visités
+public class Dijkstra<T> implements ShortestPath<T> {
+	private Map<T, Integer> dist = new HashMap<>(); // Pour stocker la distance minimale pour chaque sommet
+	private Map<T, T> pred = new HashMap<>(); // Stocke le prédécesseur pour chaque sommet
+	private Map<T, Boolean> marque = new HashMap<>(); // Stocke les sommet marqués (--> on connait deja sa distance minimale)
+	private List<T> voisinsAVisiter = new ArrayList<>(); // Stocke les sommets pas encore visités
 
 
 	@Override
-	public Distances<String> compute(Graph<String> g, String src, Animator<String> animator) throws IllegalArgumentException {
+	public Distances<T> compute(Graph<T> g, T src, Animator<T> animator) throws IllegalArgumentException {
 
 
 		// Initialisation
@@ -26,9 +26,9 @@ public class Dijkstra<String> implements ShortestPath<String> {
 
 		// On visite les sommets voisins
 		for (int i = 0; i < voisinsAVisiter.size(); i++) {
-			String sommetActuel = voisinsAVisiter.get(i);
-			for (Graph.Arc<java.lang.String> arc : g.getSucc((java.lang.String) sommetActuel)) {
-				String voisin = (String) arc.dst();
+			T sommetActuel = voisinsAVisiter.get(i);
+			for (Graph.Arc<T> arc : g.getSucc((T) sommetActuel)) {
+				T voisin = (T) arc.dst();
 
 				// Ajoute les sommets découverts à voisinsAVisiter si nouveaux
 				if (!dist.containsKey(voisin)) {
@@ -46,11 +46,11 @@ public class Dijkstra<String> implements ShortestPath<String> {
 
 
 		while (true) {
-			String sommetCourant = null;
+			T sommetCourant = null;
 			int minDist = Integer.MAX_VALUE; // Infini
 
 			// on recherche un sommet non marqué avec sa distance minimale
-			for (String s : dist.keySet()) {
+			for (T s : dist.keySet()) {
 				if (!marque.get(s) && dist.get(s) < minDist) {
 					minDist = dist.get(s); // distance minimale mise à jour
 					sommetCourant = s;
@@ -64,8 +64,8 @@ public class Dijkstra<String> implements ShortestPath<String> {
 			animator.accept(sommetCourant, dist.get(sommetCourant));
 
 			// Construction du chemin et calcul de sa valuation
-			for (Graph.Arc<java.lang.String> arc : g.getSucc((java.lang.String) sommetCourant)) {
-				String sommetVoisin = (String) arc.dst();
+			for (Graph.Arc<T> arc : g.getSucc((T) sommetCourant)) {
+				T sommetVoisin = (T) arc.dst();
 				int altChemin = dist.get(sommetCourant) + arc.val();
 
 				// Cas ou on a trouve un chemin plus court que celui déjà connu

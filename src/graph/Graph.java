@@ -26,5 +26,5 @@ public interface Graph<T> {
 	 * @param s Le sommet.
 	 * @return La liste des arcs sortants de {@code s}.
 	 */
-	List<Arc<String>> getSucc(String s);
+	List<Arc<T>> getSucc(T s);
 }
