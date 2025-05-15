@@ -22,7 +22,7 @@ public class Animation {
 			System.out.println("ficher '" + mazeFile + "' manquant ou au mauvais format");
 			return;
 		}
-		Graph<Integer> graph = new GraphMaze<>(maze);
+		Graph<Integer> graph = new GraphMaze(maze);
 		MazeView<Integer> view = MazeView.view(maze, mazeFile);
 		int start = 0;
 		int end = maze.width() * maze.height() - 1;

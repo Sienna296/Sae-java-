@@ -1,11 +1,9 @@
 package adaptator;
 
-import applications.Maze;
 import graph.Graph;
-
+import maze.*;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Set;
 
 public class GraphMaze implements Graph {
     private Maze maze;
