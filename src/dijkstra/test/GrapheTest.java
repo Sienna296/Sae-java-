@@ -1,9 +1,9 @@
-package main.dijkstra.test;
+package dijkstra.test;
 
 import java.util.List;
 
-import main.graph.GrapheHHAdj;
-import main.graph.VarGraph;
+import graph.GrapheHHAdj;
+import graph.VarGraph;
 import org.junit.jupiter.api.Test;
 
 public class GrapheTest {
@@ -20,8 +20,6 @@ public class GrapheTest {
     void test() {
         VarGraph g = new GrapheHHAdj();
         VarGraph g2 = new GrapheHHAdj();
-        VarGraph g3 = new GrapheHHAdj();
-        VarGraph g4 = new GrapheHHAdj();
         g.peupler(GRAPH1);
 
         System.out.println(g);

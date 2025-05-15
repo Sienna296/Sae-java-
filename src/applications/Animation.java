@@ -1,4 +1,4 @@
-package main.applications;
+package applications;
 
 import java.awt.Color;
 import java.io.File;
@@ -6,12 +6,12 @@ import java.io.IOException;
 import java.util.Arrays;
 import java.util.List;
 
-import main.graph.Graph;
-import main.graph.ShortestPath.Distances;
-import main.maze.panel.MazeView;
-import main.maze.regular.RegularMaze;
-import main.adaptator.GraphMaze;
-import main.dijkstra.Dijkstra;
+import graph.Graph;
+import graph.ShortestPath.Distances;
+import maze.panel.MazeView;
+import maze.regular.RegularMaze;
+import adaptator.GraphMaze;
+import dijkstra.Dijkstra;
 
 public class Animation {
 	public static void animation(String mazeFile){

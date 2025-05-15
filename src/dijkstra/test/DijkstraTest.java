@@ -1,15 +1,15 @@
-package main.dijkstra.test;
+package dijkstra.test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 import java.util.List;
 import java.util.Stack;
 
-import main.dijkstra.Dijkstra;
-import main.graph.Graph;
-import main.graph.GrapheHHAdj;
-import main.graph.ShortestPath.Distances;
-import main.graph.VarGraph;
+import dijkstra.Dijkstra;
+import graph.Graph;
+import graph.GrapheHHAdj;
+import graph.ShortestPath.Distances;
+import graph.VarGraph;
 import org.junit.jupiter.api.Test;
 
 class DijkstraTest {

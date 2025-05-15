@@ -1,14 +1,14 @@
-package main.applications;
+package applications;
 
 import java.io.File;
 import java.io.IOException;
 import java.util.Arrays;
 
-import main.graph.Graph;
-import main.graph.ShortestPath.Distances;
-import main.maze.regular.RegularMaze;
-import main.adaptator.GraphMaze;
-import main.dijkstra.Dijkstra;
+import graph.Graph;
+import graph.ShortestPath.Distances;
+import maze.regular.RegularMaze;
+import adaptator.GraphMaze;
+import dijkstra.Dijkstra;
 
 
 public class Checker {
