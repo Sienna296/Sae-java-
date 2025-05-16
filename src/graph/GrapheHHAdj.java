@@ -5,9 +5,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import static org.junit.jupiter.api.Assertions.*;
-
-
 
 public class GrapheHHAdj implements VarGraph {
 
@@ -33,7 +30,7 @@ public class GrapheHHAdj implements VarGraph {
 		ajouterSommet(source);
 		ajouterSommet(destination);
 
-		if (containsArc(source, destination)) {
+		if (contientUnArc(source, destination)) {
 			throw new IllegalArgumentException("Arc déjà présent : " + source + " -> " + destination);
 		}
 
@@ -53,7 +50,7 @@ public class GrapheHHAdj implements VarGraph {
 	}
 
 	public void oterArc(String source, String destination) {
-		if (!containsArc(source, destination)) {
+		if (!contientUnArc(source, destination)) {
 			throw new IllegalArgumentException("Arc inexistant : " + source + " -> " + destination);
 		}
 
@@ -83,7 +80,7 @@ public class GrapheHHAdj implements VarGraph {
 		return new ArrayList<>();
 	}
 
-	private boolean containsArc(String src, String dest) {
+	private boolean contientUnArc(String src, String dest) {
 		List<Arc<String>> arcs = adj.get(src);
 		if (arcs != null) {
 			for (Arc<String> arc : arcs) {

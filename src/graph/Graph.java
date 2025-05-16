@@ -17,7 +17,7 @@ public interface Graph<T> {
 	 *
 	 * @param <T>> Identifiant des sommets. Le type T doit être "hachable".
 	 */
-	public record Arc<T>(int val, String dst) {
+	public record Arc<T>(int val, T dst) {
 	}
 
 	/**
