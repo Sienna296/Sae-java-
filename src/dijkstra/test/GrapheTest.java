@@ -19,38 +19,34 @@ public class GrapheTest {
     @Test
     void test() {
         VarGraph g = new GrapheHHAdj();
-        VarGraph g2 = new GrapheHHAdj();
-        VarGraph g3 = new GrapheHHAdj();
-        g.peupler(GRAPH1);
-
+        g.peupler(GRAPH_NEG); // Graphe à valuations négatives
+        // g.peupler(GRAPH1); // Graphe à valuation positives
         System.out.println(g);
-        System.out.println("TEST AJOUT SOMMETS ET ARCS");
+        System.out.println("TEST AJOUTS DES SOMMET");
         g.ajouterSommet("A");
         g.ajouterSommet("B");
         g.ajouterSommet("C");
 
-        g.ajouterArc("A", "B", 5);
-        g.ajouterArc("A", "C", 10);
 
         System.out.println("Successeurs de A : " + g.getSucc("A"));
         System.out.println("Successeurs de B : " + g.getSucc("B"));
         System.out.println("Successeurs de C : " + g.getSucc("C"));
 
-        System.out.println("\n TEST ARC EXISTANT ");
+        System.out.println("\n TEST EXISTENCE D'ARC  ");
         System.out.println("Arc A-B : " + g.arc("A", "B"));
         System.out.println("Arc B-C (inexistant) : " + g.arc("B", "C"));
 
-        System.out.println("\n TEST SUPPRESSION ARC ");
+        System.out.println("\n TEST SUPPRESSION D'ARC ");
         g.oterArc("A", "B");
         System.out.println("Successeurs de A après suppression A-B : " + g.getSucc("A"));
         System.out.println("Successeurs de B après suppression A-B : " + g.getSucc("B"));
 
-        System.out.println("\n TEST SUPPRESSION SOMMET ");
+        System.out.println("\n TEST SUPPRESSION DE SOMMET ");
         g.oterSommet("C");
         System.out.println("Successeurs de A après suppression sommet C : " + g.getSucc("A"));
         System.out.println("Successeurs de C après suppression (devrait être vide) : " + g.getSucc("C"));
 
-        System.out.println("\n TEST AJOUT ARC DOUBLON (DOIT LANCER EXCEPTION) ");
+        System.out.println("\n TEST AJOUT D'ARC DOUBLON (IL DOIT LANCER EXCEPTION) ");
         try {
             g.ajouterArc("A", "B", 5);
             g.ajouterArc("A", "B", 5);
@@ -58,7 +54,7 @@ public class GrapheTest {
             System.out.println("Exception attendue : " + e.getMessage());
         }
 
-        System.out.println("\n TEST SUPPRESSION ARC INEXISTANT (DOIT LANCER EXCEPTION)");
+        System.out.println("\n TEST SUPPRESSION D'ARC INEXISTANT (DOIT LANCER EXCEPTION)");
         try {
             g.oterArc("A", "C");
         } catch (IllegalArgumentException e) {

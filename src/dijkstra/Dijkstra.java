@@ -39,7 +39,7 @@ public class Dijkstra<T> implements ShortestPath<T> {
 				}
 
 				if (arc.val() < 0) {
-					throw new IllegalArgumentException("Un arc à valuation négative a été détecté entre " + sommetActuel + " et " + voisin);
+					throw new IllegalArgumentException("Arc à valuation négative trouvé entre " + sommetActuel + " et " + voisin);
 				}
 			}
 		}
